@@ -1,21 +1,13 @@
 namespace RoleplayGame
 {
-    public class Staff
+    public class Staff: IAtackItem, IDefenseItem
     {
-        public int AttackValue 
+        public int Attack{get; set;}
+        public int Defense { get; set;}
+        public void AddPower(Character character)
         {
-            get
-            {
-                return 100;
-            } 
-        }
-
-        public int DefenseValue
-        {
-            get
-            {
-                return 100;
-            }
+            character.AttackValue+= this.Attack;
+            character.DefenseValue+= this.Defense;
         }
     }
 }
