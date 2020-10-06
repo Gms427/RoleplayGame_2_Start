@@ -1,0 +1,13 @@
+- Los items de defensa heredan de la clase DefenseItem (Armor, Helmet, Shield) --> Giovanna
+- Los items de ataque heredan de la clase AtackItem (Axe, Bow, Sword) --> Giovanna
+- Los items de ataque y de defensa heredan de ambas (Staff, Spell) --> Oscar
+- Los personajes heredan de Character --> Oscar
+
+- Añadir el eliminar item en Character --> Gonza
+
+
+
+
+Decidimos que IAtackItem sea una interfaz y no una clase ya que si fuera una clase, los items que tienen tanto ataque como defensa
+no podrían heredar de ella y de IDefenseItem a la vez, asi que las convertimos en interfaces para que estos items puedan implementar ambas.
+Ademas esto permite que en un futuro cada item pueda implementar su getter y setter del ataque y la defensa a su manera.

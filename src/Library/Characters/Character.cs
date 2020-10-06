@@ -7,7 +7,7 @@ namespace RoleplayGame
         string Name { get; set; }
 
         private int health = 100;
-        int Health 
+        public int Health 
         {
             get
             {
@@ -21,8 +21,8 @@ namespace RoleplayGame
         
         List<IItem> items { get; set; }
 
-        public abstract int AttackValue { get; set; }
-        public abstract int DefenseValue { get; set; }
+        public abstract int Attack { get; set; }
+        public abstract int Defense { get; set; }
 
         public Character(string name){
             this.Name = name;
@@ -30,7 +30,7 @@ namespace RoleplayGame
         
         public void AddItem(IItem item)
         {
-            if(!this.items.Contains(item))
+            if(!ExistItem(item))
             {
                 this.items.Add(item);
                 item.AddPower(this);
@@ -47,11 +47,20 @@ namespace RoleplayGame
             });
         }
 
+        /// <summary>
+        /// Dado un item, retorna true si el personaje ya lo tiene, y false en caso contrario
+        /// </summary>
+        public bool ExistItem(IItem newItem)
+        {
+            return this.items.Contains(newItem);
+        }
+
+
         public void ReceiveAttack(int power)
         {
-            if (this.DefenseValue < power)
+            if (this.Defense < power)
             {
-                this.Health -= power - this.DefenseValue;
+                this.Health -= power - this.Defense;
             }
         }
         

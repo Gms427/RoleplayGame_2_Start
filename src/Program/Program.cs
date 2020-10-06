@@ -8,7 +8,7 @@ namespace Program
         static void Main(string[] args)
         {
             SpellsBook book = new SpellsBook();
-            book.Spells = new Spell[]{ new Spell() };
+            book.Spells = new Spell[]{ new Spell("Hechizo 1", 50, 10) };
 
             Wizard gandalf = new Wizard("Gandalf");
             gandalf.Staff = new Staff();
@@ -19,9 +19,9 @@ namespace Program
             gimli.Helmet = new Helmet(12);
 
             Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-            Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");
+            Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.Attack}");
 
-            gimli.ReceiveAttack(gandalf.AttackValue);
+            gimli.ReceiveAttack(gandalf.Attack);
 
             Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
 

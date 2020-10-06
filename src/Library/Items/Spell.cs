@@ -3,35 +3,33 @@ namespace RoleplayGame
     public class Spell
     {
         public string Name { get; set; }
-        private int attack;
-        private int defense;
-         public Spell(string name,int attack, int defense)
+         public Spell(string name, int attack, int defense)
         {
             this.Name = name;
-            this.AttackValue=attack;
-            this.DefenseValue=defense;
+            this.Attack = attack;
+            this.Defense = defense;
         }
-        public int AttackValue 
+        public int Attack 
         {
             get
             {
-                return this.AttackValue;
+                return this.Attack;
             }
             set
             {
-                this.AttackValue=value;
+                this.Attack = value;
             } 
         }
 
-        public int DefenseValue
+        public int Defense
         {
             get
             {
-                return this.DefenseValue;
+                return this.Defense;
             }
             set
             {
-                this.AttackValue=value;
+                this.Defense = value;
             }
         }
     }

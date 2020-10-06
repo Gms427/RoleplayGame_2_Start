@@ -3,13 +3,13 @@ namespace RoleplayGame
     public class Axe : IAttackItem
     {
         public int Attack { get; set; }
-        public Axe(int attackValue)
+        public Axe(int attack)
         {
-            this.Attack = attackValue;
+            this.Attack = attack;
         }
         public void AddPower (Character character)
         {
-            character.AttackValue += this.Attack;
+            character.Attack += this.Attack;
         }
     }
 }
