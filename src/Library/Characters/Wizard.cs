@@ -12,31 +12,31 @@ namespace RoleplayGame
         public SpellsBook SpellsBook { get; set; }
 
         public Staff Staff { get; set; }
-
+        private int attack;
         public override int Attack
         {
             get
             {
-                return SpellsBook.Attack + this.Attack;
+                return SpellsBook.Attack + this.attack;
             }
             set
             {
                 if(value >= 0)
                 {
-                    Attack = value;
+                    this.attack = value;
                 }
             }
         }
-
+        private int defense;
         public override int Defense
         {
             get
             {
-                return SpellsBook.Defense + this.Defense;
+                return SpellsBook.Defense + this.defense;
             }
             set
             {
-                Defense = value;
+                this.defense = value;
             }
         }
     }
