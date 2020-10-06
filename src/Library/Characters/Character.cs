@@ -24,6 +24,7 @@ namespace RoleplayGame
         
         List<IItem> items { get; set; } = new List<IItem>();
 
+        
         public abstract int Attack { get; set; }
         public abstract int Defense { get; set; }
 

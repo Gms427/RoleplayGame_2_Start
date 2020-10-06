@@ -6,7 +6,7 @@ namespace RoleplayGame
     public interface IItem 
     {
         /// <summary>
-        /// Este método es implementado por cada item, la idea es que dicha implementación le agregue al personaje dueño del item, sus poderes
+        /// Este método es polimórfico ya que es implementado por cada item, la idea es que dicha implementación le agregue al personaje dueño del item, sus poderes
         /// Los items de ataque añaden su ataque al personaje (Por ej: Axe)
         /// Los items de defensa añaden su defensa al personaje (Por ej: Armor)
         /// Los items que son tanto de defensa como de ataque, añaden ambas cosas (Por ej: Staff)
