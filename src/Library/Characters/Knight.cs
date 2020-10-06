@@ -21,7 +21,7 @@ namespace RoleplayGame
         {
             get
             {
-                return Sword.AttackValue;
+                return Sword.Attack;
             }
             set
             {
@@ -33,7 +33,7 @@ namespace RoleplayGame
         {
             get
             {
-                return Armor.DefenseValue + Shield.DefenseValue;
+                return Armor.Defense + Shield.Defense;
             }
             set
             {

@@ -1,13 +1,15 @@
 namespace RoleplayGame
 {
-    public class Bow
+    public class Bow : AttackItem
     {
-        public int AttackValue 
+        public int Attack { get; set; }
+        public Bow (int attackValue)
         {
-            get
-            {
-                return 15;
-            } 
+            this.Attack = attackValue;
+        }
+        public void AddPower (Character character)
+        {
+            character.AttackValue += this.Attack;
         }
     }
 }

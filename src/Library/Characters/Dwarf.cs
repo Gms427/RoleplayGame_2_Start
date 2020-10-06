@@ -21,7 +21,7 @@ namespace RoleplayGame
         {
             get
             {
-                return Axe.AttackValue;
+                return Axe.Attack;
             }
             set
             {
