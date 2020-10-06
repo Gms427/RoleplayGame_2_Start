@@ -9,27 +9,28 @@ namespace RoleplayGame
             this.Attack = attack;
             this.Defense = defense;
         }
+        private int attack;
         public int Attack 
         {
             get
             {
-                return this.Attack;
+                return this.attack;
             }
             set
             {
-                this.Attack = value;
+                this.attack = value;
             } 
         }
-
+        private int defense;
         public int Defense
         {
             get
             {
-                return this.Defense;
+                return this.defense;
             }
             set
             {
-                this.Defense = value;
+                this.defense = value;
             }
         }
     }

@@ -2,7 +2,21 @@ namespace RoleplayGame
 {
     public class Bow : IAttackItem
     {
-        public int Attack { get; set; }
+        private int attack;
+        public int Attack
+        {
+            get
+            {
+                return this.attack;
+            }
+            set
+            {
+                if(value >= 0)
+                {
+                   this.attack = value;
+                }
+            }
+        }
         public Bow (int attack)
         {
             this.Attack = attack;

@@ -5,38 +5,30 @@ namespace Test.Library
 {
     public class TestItem
     {
-        private Item item;
-        private Item item2;
+        private IDefenseItem itemDefensa;
+        private IAttackItem itemAtaque;
 
         [SetUp]
         public void Setup()
         {
-            item = new Item("Pantalones", 0, 5);
-            item2 = new Item("Hacha", 33, 0);
-        }
-        
-        [Test]
-        public void nameValido()
-        {
-            const string expected = "Test";
-            item.Name = expected;
-            Assert.AreEqual(expected, item.Name);
+            itemDefensa= new Armor(5);
+            itemAtaque = new Axe(33);
         }
 
         [Test]
         public void defenseNegativo()
         {
             const int expected = 5;
-            item.Defense = -5;
-            Assert.AreEqual(expected, item.Defense);
+            itemDefensa.Defense = -5;
+            Assert.AreEqual(expected, itemDefensa.Defense);
         }
 
         [Test]
-        public void damageNegativo()
+        public void attackNegativo()
         {
             const int expected = 33;
-            item2.Damage = -32;
-            Assert.AreEqual(expected, item2.Damage);
+            itemAtaque.Attack = -32;
+            Assert.AreEqual(expected, itemAtaque.Attack);
         }
     }
 }

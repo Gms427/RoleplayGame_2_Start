@@ -24,7 +24,8 @@ namespace RoleplayGame
         public abstract int Attack { get; set; }
         public abstract int Defense { get; set; }
 
-        public Character(string name){
+        public Character(string name)
+        {
             this.Name = name;
         }
         

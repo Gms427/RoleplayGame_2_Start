@@ -2,7 +2,21 @@ namespace RoleplayGame
 {
     public class Armor : IDefenseItem
     {
-        public int Defense { get; set; }
+        private int defense;
+        public int Defense 
+        {
+            get
+            {
+                return this.defense;
+            }
+            set
+            {
+                if(value >= 0)
+                {
+                    this.defense = value;
+                }
+            }
+        }
         public Armor(int defense)
         {
             this.Defense = defense;

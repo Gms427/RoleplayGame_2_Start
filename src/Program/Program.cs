@@ -17,6 +17,7 @@ namespace Program
             Dwarf gimli = new Dwarf("Gimli");
             gimli.Axe = new Axe(32);
             gimli.Helmet = new Helmet(12);
+            gimli.Shield = new Shield(21);
 
             Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
             Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.Attack}");
