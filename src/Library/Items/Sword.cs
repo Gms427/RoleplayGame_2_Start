@@ -1,13 +1,15 @@
 namespace RoleplayGame
 {
-    public class Sword
+    public class Sword : AttackItem
     {
-        public int AttackValue 
+        public int Attack { get; set; }
+        public Sword(int attackValue)
         {
-            get
-            {
-                return 20;
-            } 
+            this.Attack = attackValue;
+        }
+        public void AddPower (Character character)
+        {
+            character.AttackValue += this.Attack;
         }
     }
 }

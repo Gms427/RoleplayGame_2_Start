@@ -1,13 +1,15 @@
 namespace RoleplayGame
 {
-    public class Helmet
+    public class Helmet : DefenseItem
     {
-        public int DefenseValue
+        public int Defense { get; set; }
+        public Helmet(int defenseValue)
         {
-            get
-            {
-                return 18;
-            }
+            this.Defense = defenseValue;
+        }
+        public void AddPower (Character character)
+        {
+            character.DefenseValue += this.Defense;
         }
     }
 }
