@@ -5,8 +5,19 @@ namespace RoleplayGame
     public abstract class Character
     {
         string Name { get; set; }
-        
-        int Health { get; set; }
+
+        private int health = 100;
+        int Health 
+        {
+            get
+            {
+                return this.health;
+            }
+            set
+            {
+                this.health = value < 0 ? 0 : value;
+            }
+        }
         
         List<IItem> items { get; set; }
 
