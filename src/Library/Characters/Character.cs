@@ -44,7 +44,7 @@ namespace RoleplayGame
                 /*
                     El método AddPower de la interfaz IItem me ahorra tener que estar preguntando acá si el item es de ataque o de defensa
                     De esa manera evitamos romper varios principios:
-                    LSP: Ya que ahí hago alguna sistitución entre los tipos podría generar un comportamiento inesperado
+                    LSP: Ya que si hago alguna sistitución entre los tipos podría generar un comportamiento inesperado
                     OCP: Ya que si agrego un tipo de item nuevo tengo que agregar un nuevo bloque que pregunte por ese nuevo tipo
                     Polimorfismo: Ya que tendría un bloque de código dedicado a cada tipo
                 */
