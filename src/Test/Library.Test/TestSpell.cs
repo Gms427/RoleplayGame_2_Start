@@ -33,7 +33,7 @@ namespace Test.Library
         {
             const int expected = 33;
             spell.Attack = -32;
-            Assert.AreEqual(expected,spell.Attack);
+            Assert.AreEqual(expected, spell.Attack);
         }
     }
 }

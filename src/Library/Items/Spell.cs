@@ -18,7 +18,10 @@ namespace RoleplayGame
             }
             set
             {
-                this.attack = value;
+                if(value >= 0)
+                {
+                    this.attack = value;
+                }
             } 
         }
         private int defense;
@@ -30,7 +33,10 @@ namespace RoleplayGame
             }
             set
             {
-                this.defense = value;
+                if(value >= 0)
+                {
+                    this.defense = value;
+                }
             }
         }
     }

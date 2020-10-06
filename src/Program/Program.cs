@@ -7,6 +7,10 @@ namespace Program
     {
         static void Main(string[] args)
         {
+
+            Character character = new Archer("Test Archer");
+
+            character.Attack = -100;
             SpellsBook book = new SpellsBook();
             book.Spells = new Spell[]{ new Spell("Hechizo 1", 50, 10) };
 

@@ -14,18 +14,26 @@ namespace RoleplayGame
         public Shield Shield { get; set; }
 
         public Helmet Helmet { get; set; }
-
+        private int attack;
+        private int defense;
         public override int Attack
         {
             get
             {
-                return Axe.Attack;
+                if(this.Axe != null && this.Axe.Attack > 0)
+                {
+                    return this.attack + Axe.Attack;
+                }
+                else 
+                {
+                    return this.attack;
+                }
             }
             set
             {
                 if(value >= 0)
                 {
-                    Attack = value;
+                    this.attack = value;
                 }
             }
         }
@@ -34,11 +42,18 @@ namespace RoleplayGame
         {
             get
             {
-                return Shield.Defense + Helmet.Defense;
+                if(this.Shield != null && this.Shield.Defense > 0)
+                {
+                    return this.defense + Shield.Defense;
+                }
+                else
+                {
+                    return this.defense;
+                }
             }
             set
             {
-                Defense = value;
+                this.defense = value;
             }
             
         }

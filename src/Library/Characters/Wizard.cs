@@ -17,7 +17,14 @@ namespace RoleplayGame
         {
             get
             {
-                return SpellsBook.Attack + this.attack;
+                if(this.SpellsBook != null && this.SpellsBook.Attack > 0)
+                {
+                    return this.attack + SpellsBook.Attack;
+                }
+                else 
+                {
+                    return this.attack;
+                }
             }
             set
             {
@@ -32,7 +39,14 @@ namespace RoleplayGame
         {
             get
             {
-                return SpellsBook.Defense + this.defense;
+                if(this.SpellsBook != null && this.SpellsBook.Defense > 0)
+                {
+                    return this.defense + SpellsBook.Defense;
+                }
+                else
+                {
+                    return this.defense;
+                }
             }
             set
             {

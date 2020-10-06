@@ -2,10 +2,13 @@ using System.Collections.Generic;
 
 namespace RoleplayGame
 {
+    /// <summary>
+    /// Clase padre de todos los Personajes:
+    /// Tiene los atributos y métodos comunes a todos los personajes, para que ellos puedan heredarlos
+    /// </summary>
     public abstract class Character
     {
         string Name { get; set; }
-
         private int health = 100;
         public int Health 
         {
@@ -19,7 +22,7 @@ namespace RoleplayGame
             }
         }
         
-        List<IItem> items { get; set; }
+        List<IItem> items { get; set; } = new List<IItem>();
 
         public abstract int Attack { get; set; }
         public abstract int Defense { get; set; }
@@ -29,6 +32,9 @@ namespace RoleplayGame
             this.Name = name;
         }
         
+        /// <summary>
+        /// Dado un item, lo añade a la lista de items del personaje
+        /// </summary>
         public void AddItem(IItem item)
         {
             if(!ExistItem(item))
@@ -38,6 +44,9 @@ namespace RoleplayGame
             }
         }
 
+        /// <summary>
+        /// Dado un item, lo busca en la lista de items del personaje, y si lo encuentra lo elimina
+        /// </summary>
         public void DeleteItem(IItem item)
         {
             this.items.ForEach(it => {
@@ -57,6 +66,9 @@ namespace RoleplayGame
         }
 
 
+        /// <summary>
+        /// Resta a la vidal del personaje el valor recibido menos su defensa
+        /// </summary>
         public void ReceiveAttack(int power)
         {
             if (this.Defense < power)
@@ -65,6 +77,9 @@ namespace RoleplayGame
             }
         }
         
+        /// <summary>
+        /// Reestablece la vida del personaje
+        /// </summary>
         public void Cure()
         {
             this.Health = 100;
