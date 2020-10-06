@@ -28,12 +28,12 @@ namespace Test.Library
             spell.Defense = -5;
             Assert.AreEqual(expected, spell.Defense);
         }
-        
+        [Test]
         public void damageNegativo()
         {
             const int expected = 33;
-            spell.Damage = -32;
-            Assert.AreEqual(expected,spell.Damage);
+            spell.Attack = -32;
+            Assert.AreEqual(expected,spell.Attack);
         }
     }
 }
