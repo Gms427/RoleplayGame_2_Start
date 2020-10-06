@@ -2,8 +2,6 @@ namespace RoleplayGame
 {
     public class Knight: Character
     {
-        private int health = 100;
-
         public Knight(string name): base(name)
         {
             this.Name = name;
@@ -17,7 +15,7 @@ namespace RoleplayGame
 
         public Armor Armor { get; set; }
 
-        public override int AttackValue
+        public override int Attack
         {
             get
             {
@@ -25,11 +23,14 @@ namespace RoleplayGame
             }
             set
             {
-                AttackValue=value;
+                if(value >= 0)
+                {
+                    Attack = value;
+                }
             }
         }
 
-        public override int DefenseValue
+        public override int Defense
         {
             get
             {
@@ -37,19 +38,7 @@ namespace RoleplayGame
             }
             set
             {
-                DefenseValue=value;
-            }
-        }
-
-        public int Health
-        {
-            get
-            {
-                return this.health;
-            }
-            private set
-            {
-                this.health = value < 0 ? 0 : value;
+                Defense = value;
             }
         }
     }

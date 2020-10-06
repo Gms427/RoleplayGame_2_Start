@@ -3,13 +3,13 @@ namespace RoleplayGame
     public class Armor : IDefenseItem
     {
         public int Defense { get; set; }
-        public Armor(int defenseValue)
+        public Armor(int defense)
         {
-            this.Defense = defenseValue;
+            this.Defense = defense;
         }
         public void AddPower (Character character)
         {
-            character.DefenseValue += this.Defense;
+            character.Defense += this.Defense;
         }
     }
 }

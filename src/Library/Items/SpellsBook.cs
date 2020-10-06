@@ -6,27 +6,27 @@ namespace RoleplayGame
     {
         public Spell[] Spells { get; set; }
         
-        public int AttackValue
+        public int Attack
         {
             get
             {
                 int value = 0;
                 foreach (Spell spell in this.Spells)
                 {
-                    value += spell.AttackValue;
+                    value += spell.Attack;
                 }
                 return value;
             }
         }
 
-        public int DefenseValue
+        public int Defense
         {
             get
             {
                 int value = 0;
                 foreach (Spell spell in this.Spells)
                 {
-                    value += spell.DefenseValue;
+                    value += spell.Defense;
                 }
                 return value;
             }

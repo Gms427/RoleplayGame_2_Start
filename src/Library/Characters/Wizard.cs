@@ -13,27 +13,30 @@ namespace RoleplayGame
 
         public Staff Staff { get; set; }
 
-        public override int AttackValue
+        public override int Attack
         {
             get
             {
-                return SpellsBook.AttackValue + this.AttackValue;
+                return SpellsBook.Attack + this.Attack;
             }
             set
             {
-                AttackValue=value;
+                if(value >= 0)
+                {
+                    Attack = value;
+                }
             }
         }
 
-        public override int DefenseValue
+        public override int Defense
         {
             get
             {
-                return SpellsBook.DefenseValue + this.DefenseValue;
+                return SpellsBook.Defense + this.Defense;
             }
             set
             {
-                DefenseValue=value;
+                Defense = value;
             }
         }
     }

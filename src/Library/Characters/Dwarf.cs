@@ -2,8 +2,6 @@ namespace RoleplayGame
 {
     public class Dwarf: Character
     {
-
-
         public Dwarf(string name): base(name)
         {
             this.Name = name;
@@ -17,7 +15,7 @@ namespace RoleplayGame
 
         public Helmet Helmet { get; set; }
 
-        public override int AttackValue
+        public override int Attack
         {
             get
             {
@@ -25,19 +23,22 @@ namespace RoleplayGame
             }
             set
             {
-                AttackValue=value;
+                if(value >= 0)
+                {
+                    Attack = value;
+                }
             }
         }
 
-        public override int DefenseValue
+        public override int Defense
         {
             get
             {
-                return Shield.DefenseValue + Helmet.DefenseValue;
+                return Shield.Defense + Helmet.Defense;
             }
             set
             {
-                DefenseValue=value;
+                Defense = value;
             }
             
         }

@@ -13,7 +13,7 @@ namespace RoleplayGame
 
         public Helmet Helmet { get; set; }
 
-        public override int AttackValue
+        public override int Attack
         {
             get
             {
@@ -21,19 +21,22 @@ namespace RoleplayGame
             }
             set
             {
-                AttackValue=value;
+                if(value >= 0)
+                {
+                    Attack = value;
+                }
             }
         }
 
-        public override int DefenseValue
+        public override int Defense
         {
             get
             {
-                return Helmet.DefenseValue;
+                return Helmet.Defense;
             }
             set
             {
-                DefenseValue=value;
+                Defense = value;
             }
         }
     }
